@@ -6,7 +6,7 @@
     <groupId>oracle.paas.javaee</groupId>
     <artifactId>main</artifactId>
 	<version>18.1.4-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>ear</packaging>
 
     <modules>
         <module>server</module>
