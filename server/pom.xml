@@ -12,8 +12,4 @@
     <artifactId>server</artifactId>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>environment</module>
-    </modules>
-
 </project>
