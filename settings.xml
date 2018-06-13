@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <proxies>
+     <proxy>
+       <active>true</active>
+       <protocol>http</protocol>
+       <host>www-proxy.us.oracle.com</host>
+       <port>80</port>
+       <nonProxyHosts>localhost|*.oracle.com|*.oracleads.com|*.us.oracle.com|*.uk.oracle.com|*.ca.oracle.com|*.oraclecorp.com|*.oracleportal.com</nonProxyHosts>
+     </proxy>
+  </proxies>
+  <mirrors>
+    <mirror>
+      <mirrorOf>central</mirrorOf>
+      <name>repo1</name>
+      <url>http://artifactory-slc.oraclecorp.com/artifactory/repo1</url>
+      <id>repo1</id>
+    </mirror>
+  </mirrors>
+  <servers>
+    <server>
+      <username>cis-publisher</username>
+      <password>AP6nCXht5QFYNrs9A8pbqLAw1yz</password>
+      <id>cis-release-local</id>
+    </server>
+    <server>
+      <username>cis-publisher</username>
+      <password>AP6nCXht5QFYNrs9A8pbqLAw1yz</password>
+      <id>cis-dev-local</id>
+    </server>
+     <!--server>
+                <username>admin</username>
+      <id>fmw-virtual</id>
+    </server-->
+  </servers>
+  <profiles>
+    <profile>
+       <id>cis-release-local</id>
+       <activation>
+           <activeByDefault>false</activeByDefault>
+       </activation>
+       <properties>
+           <repo-id>cis-release-local</repo-id>
+           <repo-name>paas local release Artifactory</repo-name>
+           <repo-url>http://artifactory.oraclecorp.com/artifactory/cis-release-local</repo-url>
+       </properties>
+    </profile>
+    <profile>
+       <id>cis-snapshot-local</id>
+       <activation>
+       <activeByDefault>false</activeByDefault>
+       </activation>
+       <properties>
+           <repo-id>cis-dev-local</repo-id>
+           <repo-name>paas local snapshot Artifactory</repo-name>
+           <repo-url>http://artifactory.oraclecorp.com/artifactory/cis-dev-local</repo-url>
+       </properties>
+    </profile>
+  </profiles>
+</settings>
