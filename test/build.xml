@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<project name="javaee" default="help" basedir=".">
+
+    <dirname property="JAVAEE.basedir" file="${ant.file.javaee}"/>
+    <property name="javaee.source" value="${JAVAEE.basedir}/../" />
+
+    <target name="installFromSourceJEE">
+        <!-- Staging components and services
+        <copy todir="${apaas.ocs.home}/metadata/">
+            <fileset dir="${javaee.source}/server/metadata/"/>
+        </copy>
+        -->
+        <copy file="${javaee.source}/test/samples/sample1/target/sample1-${apaas.version}.zip" tofile="${apaas.ocs.home}/samples/javaee-sample-${apaas.dist.version}.zip"/>
+        <copy file="${javaee.source}/test/samples/sample1/target/sample1-${apaas.version}.zip" tofile="${apaas.ocs.home}/../extensions/apaas/samples/javaee-sample-${apaas.dist.version}.zip"/>
+    </target>
+
+    <target name="help">
+        <echo message="ant installFromSourceJavaee - copy all required files at ${apaas.ocs.home}"/>
+    </target>
+
+</project>

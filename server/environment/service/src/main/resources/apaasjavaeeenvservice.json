@@ -1,0 +1,12 @@
+{"serviceType": "APaaSJavaEEEnvironment", "displayName": "APAAS JavaEE Environment", "description": "APAAS JAVAEE Environment",
+  "versions": [
+  {
+    "version" : "1",
+    "components" : [
+      {
+        "component" : "ENV-JAVAEE",
+        "versionAbbr" : "1"
+      }
+    ]
+  }
+]}
