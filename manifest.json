@@ -1,0 +1,8 @@
+{
+  "release": {
+    "build": "160620.1154",
+    "version": "16.1.0"
+  },
+  "startupTime":600,
+  "notes": "javaee sample app release"
+}
